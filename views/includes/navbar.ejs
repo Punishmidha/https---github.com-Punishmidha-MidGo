@@ -1,0 +1,110 @@
+<style>
+  .search-btn {
+    background-color: #fe4248 !important;
+    color: #fff;
+    border-radius: 25px;
+    padding: 0 1rem 0 1rem;
+  }
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 767px) {
+  .navbar-toggler-icon {
+    background-color: transparent;
+  }
+
+  .navbar-nav .nav-link {
+    color: white;
+  }
+  
+  .navbar-brand span {
+    color: white;
+  }
+}
+
+
+  .search-btn:hover {
+    background-color: #fe424d;
+    color: #fff;
+  }
+
+  .search-btn i {
+    display: inline;
+    margin-right: 0.4rem;
+  }
+
+  .search-inp {
+    border-radius: 25px;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+  }
+
+  .signup{
+    background-color: #fe424d;
+  }
+
+  .login{
+    margin-left: 0.2rem;
+  }
+  .login:hover{
+    background-color: #fe424d;
+  }
+
+  .logout{
+    margin-left: 0.2rem;
+    background-color: #fe424d;
+  }
+
+  .logoName{
+    color: rgb(200, 210, 227);
+    font-size: 2rem ;
+    font-family: cursive;
+  }
+</style>
+
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings"><i class="fa-brands fa-mastodon"></i><span class="logoName"><b>idGo</b></span></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-3">
+        <b><a class="nav-link" href="/listings"> Explore</a></b>
+        <b> <a class="nav-link" href="/listings/new">Airbnb your home</a></b>
+      </div>
+
+      <div class="navbar-nav ms-auto">
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2 search-inp"
+            type="search"
+            placeholder="Search destinations"
+          />
+          <button  class="btn btn-danger search-btn" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>Search
+          </button>
+        </form>
+      </div>
+
+      <div class="navbar-nav ms-auto">
+
+        <% if(!currUser) {%>
+        <a class="btn btn-danger signup" href="/signup">Signup</a>
+        <a class="btn btn-outline-danger login" href="/login">Log in</a>
+
+        <% } %> <% if(currUser) {%>
+        <a class="btn btn-danger logout" href="/logout">Log out</a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>
