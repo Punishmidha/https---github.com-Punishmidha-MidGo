@@ -15,6 +15,12 @@
     background-color: transparent;
   }
 
+  .navCollapse{
+    /* background-image: linear-gradient(to right, rgb(236, 239, 244) , rgb(219, 225, 236) ,  rgb(219, 225, 236) , rgb(236, 239, 244)); */
+    background-color:  rgb(27, 45, 74);
+    width: 100%;
+  }
+
   .navbar-nav .nav-link {
     color: white;
   }
@@ -63,7 +69,7 @@
   }
 </style>
 
-<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+<nav class="navbar navbar-expand-md bg-body-light  border-bottom sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="/listings"><i class="fa-brands fa-mastodon"></i><span class="logoName"><b>idGo</b></span></a>
     <button
@@ -72,11 +78,11 @@
       data-bs-toggle="collapse"
       data-bs-target="#navbarNavAltMarkup"
     >
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon "></span>
     </button>
     
 
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="collapse navbar-collapse navCollapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-3">
         <b><a class="nav-link" href="/listings"> Explore</a></b>
         <b> <a class="nav-link" href="/listings/new">Airbnb your home</a></b>
