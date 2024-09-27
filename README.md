@@ -21,6 +21,23 @@ Built using **MongoDB**, **Express.js**, **Node.js**, and **EJS**, this applicat
 
 ---
 
+### Home Page
+![Home Page](./screenshots/homePage.png)
+
+### Property Listings Page
+![Property Listings](./screenshots/aboutListing.png)
+
+### Add Page
+![Booking Page](./screenshots/addListing.png)
+
+### Login
+![Home Page](./screenshots/loginPage.png)
+
+### Signup
+![Property Listings](./screenshots/signupPage.png)
+
+---
+
 ## Technologies Used
 
 ### Backend
